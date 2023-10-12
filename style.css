@@ -104,7 +104,7 @@ h2 a {
     color: white;
 }
 #slide_cv{
-    background-image:  linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2)), url('CV.jpeg'); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
+    background-image:  linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2)), url('cv.jpeg'); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
