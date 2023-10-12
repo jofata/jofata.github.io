@@ -1,0 +1,175 @@
+/* Réinitialisation des styles par défaut */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap');
+html{
+    --bg: #edf2f4;
+    --text: #2b2d42;
+    --color3: #8d99ae;
+}
+
+html{
+    background-color: var(--bg);
+    color : var(--text);
+}
+body, h1, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style de la bande de menu */
+header {
+    background-color: var(--text);
+    color: var(--bg);
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--bg);
+}
+
+/* Style de la section principale */
+.section {
+    text-align: center;
+    padding: 100px 0;
+}
+
+/* Style du nom */
+h1 {
+    font-size: 52px;
+    font-style: bold;
+}
+
+
+/* Style du lien */
+a {
+    color: #007BFF;
+}
+
+h2 a {
+    text-decoration: none;
+    color: var(--text);
+}
+/* Réactivité */
+@media screen and (max-width: 600px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+
+.gallery {
+    background: #EEE;
+  }
+  
+  .gallery-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+  }
+  
+  /* cell number */
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+
+#slide_projet{
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2)),url('projets.jpeg'); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+}
+#slide_cv{
+    background-image:  linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2)), url('CV.jpeg'); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+}
+#slide_formation{
+    background-image:  linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2)), url('enseirb.jpeg'); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+}
+
+.centered_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px #000; 
+}
+
+  /* formation */
+  .formation-box {
+    display: flex;
+    border: 1px solid #ccc;
+    max-width: 800px;
+    margin: 10px;
+    padding: 10px;
+    min-height: 100px;
+    border-radius: 5px;
+}
+
+/* Styles pour l'image */
+.formation-image {
+    flex: 1;
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.formation-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styles pour le titre et la description */
+.formation-details {
+    flex: 3;
+}
+
+.formation-title {
+    font-weight: bold;
+}
+
+.formation-description {
+    margin-top: 5px;
+}
+
+.boxes_container{
+    width: 50%; /* Vous pouvez ajuster la largeur selon vos besoins */
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ 
+}
