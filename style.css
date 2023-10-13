@@ -148,10 +148,12 @@ h2 a {
     border: 1px solid #ccc;
     max-width: 800px;
     margin: 10px;
+    margin-bottom: 20px;
     padding: 10px;
     min-height: 100px;
     border-radius: 5px;
     background-color: var(--color3);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 }
 
 .formation-box:hover{
@@ -193,6 +195,7 @@ h2 a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 30px;
 }
 #about{
     min-height: 140px;
