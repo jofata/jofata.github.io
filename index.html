@@ -6,6 +6,42 @@
     <title>Joris ROUSERE</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="carousel.css">
+    <script> 
+    document.addEventListener("DOMContentLoaded", function() {
+      var text1 = document.getElementById('line1');
+      var text2 = document.getElementById('line2');
+
+      var splitText1 = text1.innerText.split('');
+      var splitText2 = text2.innerText.split('');
+
+      text1.innerHTML = '';
+      text2.innerHTML = '';
+
+      var i1 = 0;
+      var i2 = 0;
+
+      function ajoutDeLettre1() {
+        if (i1 < splitText1.length) {
+          text1.innerHTML += splitText1[i1];
+          i1++;
+        } else {
+          clearInterval(interval1);
+          setTimeout(function() {
+            interval2 = setInterval(ajoutDeLettre2, 50);
+          }, 500); // Définissez le délai ici en millisecondes avant de commencer la deuxième ligne
+        }
+      }
+
+      function ajoutDeLettre2() {
+        if (i2 < splitText2.length) {
+          text2.innerHTML += splitText2[i2];
+          i2++;
+        }
+      }
+
+      var interval1 = setInterval(ajoutDeLettre1, 50);
+    });
+    </script>
 
 </head>
 <body>
@@ -24,10 +60,11 @@
     </header>
     <main>
         <div id="about" class="section">
-            <h1>Joris ROUSERE</h1>
-                <h2>Etudiant à l'<a href='http://enseirb-matmeca.bordeaux-inp.fr'>ENSEIRB-MATMECA</a></h2>
+          <h1>
+            <span id="line1">Joris ROUSERE</span><br>
+            </h1>
+         <h2> <span id="line2">Etudiant à l'ENSEIRB-MATMECA</span></h2>
         </div>
-
         <!-- Carousel -->
         <div>
           <div>

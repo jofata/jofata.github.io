@@ -1,9 +1,9 @@
 /* Réinitialisation des styles par défaut */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap');
 html{
-    --bg: #edf2f4;
-    --text: #2b2d42;
-    --color3: #8d99ae;
+    --bg: #212529;
+    --text: #e9ecef;
+    --color3: #16181b;
 }
 
 html{
@@ -18,7 +18,7 @@ body, h1, ul, li {
 
 /* Style de la bande de menu */
 header {
-    background-color: var(--text);
+    background-color: var(--color3);
     color: var(--bg);
     text-align: center;
     padding: 10px 0;
@@ -31,11 +31,21 @@ nav ul {
 nav ul li {
     display: inline;
     margin: 0 10px;
+    transition: transform 0.5s, color 0.5s;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--bg);
+    color: var(--text);
+    transition: color 0.5s;
+}
+
+/* Animation des liens */
+nav a:hover {
+    color: #71b6ff;
+    transform: scale(1.1);
+    font-weight: bold;
+    transition-duration: 1s;
 }
 
 /* Style de la section principale */
@@ -47,9 +57,8 @@ nav a {
 /* Style du nom */
 h1 {
     font-size: 52px;
-    font-style: bold;
+    font-weight: bold;
 }
-
 
 /* Style du lien */
 a {
@@ -60,6 +69,7 @@ h2 a {
     text-decoration: none;
     color: var(--text);
 }
+
 /* Réactivité */
 @media screen and (max-width: 600px) {
     nav ul {
@@ -72,47 +82,51 @@ h2 a {
     }
 }
 
-
 .gallery {
     background: #EEE;
-  }
-  
-  .gallery-cell {
+}
+
+.gallery-cell {
     width: 66%;
     height: 200px;
     margin-right: 10px;
     background: #8C8;
     counter-increment: gallery-cell;
-  }
-  
-  /* cell number */
-  .gallery-cell:before {
+}
+
+/* cell number */
+.gallery-cell:before {
     display: block;
     text-align: center;
     content: counter(gallery-cell);
     line-height: 200px;
     font-size: 80px;
     color: white;
-  }
+}
 
-#slide_projet{
-    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2)),url('projets.jpeg'); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
+#slide_projet {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2)),url('projets.jpeg');
+    /* Remplacez 'votre-image.jpg' par le chemin de votre image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
     color: white;
 }
-#slide_cv{
-    background-image:  linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2)), url('cv.jpeg'); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
+
+#slide_cv {
+    background-image:  linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2)), url('cv.jpeg');
+    /* Remplacez 'votre-image.jpg' par le chemin de votre image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
     color: white;
 }
-#slide_formation{
-    background-image:  linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2)), url('enseirb.jpeg'); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
+
+#slide_formation {
+    background-image:  linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2)), url('enseirb.jpeg');
+    /* Remplacez 'votre-image.jpg' par le chemin de votre image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -128,8 +142,8 @@ h2 a {
     text-shadow: 2px 2px 4px #000; 
 }
 
-  /* formation */
-  .formation-box {
+/* formation */
+.formation-box {
     display: flex;
     border: 1px solid #ccc;
     max-width: 800px;
@@ -137,6 +151,13 @@ h2 a {
     padding: 10px;
     min-height: 100px;
     border-radius: 5px;
+    background-color: var(--color3);
+}
+
+.formation-box:hover{
+    background-color: var(--text);
+    color: var(--color3);
+    transition-duration: 0.7s;
 }
 
 /* Styles pour l'image */
@@ -165,11 +186,14 @@ h2 a {
 }
 
 .boxes_container{
-    width: 50%; /* Vous pouvez ajuster la largeur selon vos besoins */
+    width: 50%;
+    /* Vous pouvez ajuster la largeur selon vos besoins */
     margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
- 
+}
+#about{
+    min-height: 140px;
 }
