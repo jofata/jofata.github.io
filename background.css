@@ -7,7 +7,7 @@
       border-radius: 50%;
       -webkit-animation: 'screen'  infinite;
       animation: 'screen'  infinite;
-      z-index: auto;
+      z-index: -1;
 
     }
     
