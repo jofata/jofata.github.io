@@ -17,6 +17,7 @@ body, h1, ul, li {
 }
 
 /* Style de la bande de menu */
+/* Style de la bande de menu */
 header {
     background-color: var(--color3);
     color: var(--bg);
@@ -26,12 +27,27 @@ header {
 
 nav ul {
     list-style: none;
+    display: flex;
+    justify-content: space-between; /* Modification pour l'espacement des éléments */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
     transition: transform 0.5s, color 0.5s;
+}
+
+/* Premier élément à gauche, les trois suivants au milieu et les deux derniers à droite */
+nav ul li:nth-child(1) {
+    margin-right: auto;
+}
+
+nav ul li:nth-child(2),
+nav ul li:nth-child(3),
+nav ul li:nth-child(4) {
+    margin: 0 10px;
+}
+
+nav ul li:nth-child(5) {
+    margin-left: auto;
 }
 
 nav a {
@@ -47,6 +63,7 @@ nav a:hover {
     font-weight: bold;
     transition-duration: 1s;
 }
+
 
 /* Style de la section principale */
 .section {
