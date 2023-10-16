@@ -177,6 +177,7 @@ h2 a {
 
 /* formation */
 .formation-box {
+    position: relative;
     display: flex;
     border: 1px solid #ccc;
     max-width: 800px;
@@ -187,6 +188,17 @@ h2 a {
     border-radius: 5px;
     background-color: var(--color3);
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+.link-top-right {
+    position: absolute;
+    top: 10px; /* ajustez cette valeur pour placer votre lien exactement où vous le souhaitez */
+    right: 10px; /* ajustez cette valeur pour placer votre lien exactement où vous le souhaitez */
+    /* Ajoutez d'autres styles si nécessaire, comme la couleur, la taille de la police, etc. */
+    font-size: 30px;
+}
+.link-top-right:hover {
+    color: red;
+    transition-duration: 0.5s;
 }
 
 .formation-box:hover{
