@@ -61,8 +61,15 @@ nav ul li:nth-child(5) {
 
 nav a {
     text-decoration: none;
-    color: var(--text);
     transition: color 0.5s;
+    font-weight: bold;
+    color: var(--text);
+    text-shadow:  0 0 20px #007BFF, 
+                0 0 30px #fff, 
+                0 0 42px #007BFF,   
+                0 0 77px #007BFF, 
+                0 0 100px #007BFF 
+   
 }
 
 /* Animation des liens */
