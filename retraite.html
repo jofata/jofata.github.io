@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    #countdown {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+<title>Compte à rebours</title>
+</head>
+<body>
+<div id="countdown">
+    <h1 id="timer"></h1>
+</div>
+
+<script>
+    // Définir la date de fin du compte à rebours
+    const countDownDate = new Date("Oct 03, 2025 17:00:00").getTime();
+
+    // Mettre à jour le compte à rebours toutes les secondes
+    const x = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+
+        // Calculer les jours, heures, minutes et secondes restants
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Afficher le compte à rebours dans l'élément h1 avec l'id "timer"
+        document.getElementById("timer").innerHTML = "<center>Retraite : </center><br />" +days + "j " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        // Afficher un message lorsque le compte à rebours est terminé
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
+</body>
+</html>
